@@ -27,6 +27,7 @@
    3）读取第1，2，size-1，size字节的数据，组合为加密码：encryption-key=[EA 98]
    4）把加密码按从小到大排列得到解密码：decrypt-key=[89 AE]
    5）分割解密区：[57 EF F7 7B EA AF 59 ED 7C 8C]，[13 52 27 47 E5 A6 09 6B D5 8E]
+   6）检查解密区：[57 EF F7 7B =A =F 5= ED 7C =C]，[13 52 27 47 =5 =6 0= 6B D5 =E](解密检查：通过)
    6）解密解密区：[57 EF F7 7B AF 5E D7 CC]，[13 52 27 47 56 06 BD 5E]
    7）组合源文件：EA 57 EF F7 7B AF 5E D7 CC 13 52 27 47 56 06 BD 5E 98
    8）计算文件HASH：b0cb89ecca3580e5e74bb66545bdfacc9b57ab73b6f6488c1bd5dae2f7858e8698187b17d550cf4003edcea76bc98e1514669814ba0db8a6b04c6bcf0e13a37f
